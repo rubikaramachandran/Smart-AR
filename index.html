@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart AR  - Learning Comes Alive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-logo">Smart AR </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#modules">AR Modules</a>
+      <a href="#assistant">AI Assistant</a>
+      <a href="#quizzes">Quizzes</a>
+      <a href="#portal">Parent/Teacher</a>
+      <a href="#markers">AR Markers</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <section id="home" class="section hero">
+    <div class="hero-content">
+      <h1>Smart AR </h1>
+      <p class="tagline">Learning Comes Alive — Smart AR</p>
+      <p class="hero-sub">
+        Bring your school textbook to life with Augmented Reality diagrams,
+        voice explanations, interactive quizzes, and AI study support.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="primary-btn" id="tryArBtn">🚀 Try AR</button>
+        <button class="secondary-btn">▶ Watch Demo</button>
+      </div>
+
+      <div class="hero-features">
+        <div class="pill">📐 AR Diagrams</div>
+        <div class="pill">🎙 Voice Explanations</div>
+        <div class="pill">❓ Interactive Quizzes</div>
+        <div class="pill">🤖 AI Q&A</div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <!-- Placeholder for demo image/video -->
+      <div class="hero-video-placeholder">
+        <span>AR Textbook Demo Preview</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AR Learning Modules Page -->
+  <section id="modules" class="section">
+    <h2>📚 AR Learning Modules</h2>
+    <p class="section-subtitle">
+      Scan textbook pages and see concepts pop out in 3D with explanations.
+    </p>
+
+    <div class="modules-grid">
+      <!-- Module Card 1 -->
+      <div class="module-card">
+        <h3>🌌 Solar System</h3>
+        <p>Explore planets in 3D, understand orbits and distances visually.</p>
+        <div class="module-actions">
+          <button class="outline-btn scan-btn">📷 Scan Image</button>
+          <button class="text-btn">View in AR →</button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 60%"></div>
+        </div>
+        <p class="progress-text">Progress: 60% completed</p>
+      </div>
+
+      <!-- Module Card 2 -->
+      <div class="module-card">
+        <h3>❤️ Human Heart</h3>
+        <p>View the heart in AR, watch blood flow and understand each chamber.</p>
+        <div class="module-actions">
+          <button class="outline-btn scan-btn">📷 Scan Image</button>
+          <button class="text-btn">View in AR →</button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 35%"></div>
+        </div>
+        <p class="progress-text">Progress: 35% completed</p>
+      </div>
+
+      <!-- Module Card 3 -->
+      <div class="module-card">
+        <h3>💧 Water Cycle</h3>
+        <p>Watch evaporation, condensation, and rainfall as animated AR scenes.</p>
+        <div class="module-actions">
+          <button class="outline-btn scan-btn">📷 Scan Image</button>
+          <button class="text-btn">View in AR →</button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%"></div>
+        </div>
+        <p class="progress-text">Progress: 80% completed</p>
+      </div>
+    </div>
+
+    <p class="note-text">
+      *Progress and completion data can be synced with a backend or local storage in a future version.
+    </p>
+  </section>
+
+  <!-- AI Study Assistant Page -->
+  <section id="assistant" class="section assistant-section">
+    <h2>🧠 AI Study Assistant</h2>
+    <p class="section-subtitle">
+      Ask doubts, revise concepts, and get explanations for AR diagrams.
+    </p>
+
+    <div class="assistant-layout">
+      <div class="assistant-info">
+        <ul>
+          <li>💬 Ask topic-based questions (Solar System, Human Heart, Water Cycle, etc.).</li>
+          <li>📝 Get quiz and revision suggestions.</li>
+          <li>📖 Explain complex textbook diagrams in simple language.</li>
+        </ul>
+        <p class="note-text">
+          *This UI can be connected to a real AI model (e.g., TensorFlow Lite / API) in the full system.
+        </p>
+      </div>
+
+      <div class="assistant-chat">
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-message bot">
+            👋 Hi! I'm your Smart AR Study Assistant. Ask me about any topic, like
+            <strong>"Explain the water cycle"</strong>.
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your question here..."
+          />
+          <button id="chatSendBtn" class="primary-btn small">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz & Evaluation Page -->
+  <section id="quizzes" class="section quiz-section">
+    <h2>📝 Quiz & Evaluation</h2>
+    <p class="section-subtitle">
+      Test your understanding with topic-wise MCQs and track your performance.
+    </p>
+
+    <div class="quiz-layout">
+      <!-- Quiz Form -->
+      <div class="quiz-card">
+        <h3>Solar System — Quick Quiz</h3>
+        <form id="quizForm">
+          <div class="question">
+            <p>1. Which planet is known as the Red Planet?</p>
+            <label><input type="radio" name="q1" value="a" /> Earth</label>
+            <label><input type="radio" name="q1" value="b" /> Mars</label>
+            <label><input type="radio" name="q1" value="c" /> Jupiter</label>
+          </div>
+
+          <div class="question">
+            <p>2. What is at the center of our Solar System?</p>
+            <label><input type="radio" name="q2" value="a" /> The Moon</label>
+            <label><input type="radio" name="q2" value="b" /> The Sun</label>
+            <label><input type="radio" name="q2" value="c" /> Earth</label>
+          </div>
+
+          <div class="question">
+            <p>3. Which of these is a gas giant?</p>
+            <label><input type="radio" name="q3" value="a" /> Mercury</label>
+            <label><input type="radio" name="q3" value="b" /> Saturn</label>
+            <label><input type="radio" name="q3" value="c" /> Venus</label>
+          </div>
+
+          <button type="submit" class="primary-btn">Submit Quiz</button>
+        </form>
+        <p id="quizResult" class="quiz-result"></p>
+      </div>
+
+      <!-- Leaderboard & Dashboard -->
+      <div class="quiz-stats">
+        <div class="leaderboard-card">
+          <h3>🏆 Leaderboard</h3>
+          <ul id="leaderboardList">
+            <li>Student A — 3/3</li>
+            <li>Student B — 2/3</li>
+            <li>Student C — 2/3</li>
+          </ul>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>📊 Your Performance</h3>
+          <p>Last Quiz Score: <span id="lastScore">-</span></p>
+          <p>Total Quizzes Taken: <span id="quizCount">0</span></p>
+          <p>Best Score: <span id="bestScore">-</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parent / Teacher Portal -->
+  <section id="portal" class="section">
+    <h2>🔍 Parent & Teacher Portal (Future)</h2>
+    <p class="section-subtitle">
+      Monitor student progress and get personalised recommendations.
+    </p>
+
+    <div class="portal-grid">
+      <div class="portal-card">
+        <h3>📈 Track Performance</h3>
+        <p>
+          View quiz scores, time spent per topic, and AR module completion for each student.
+        </p>
+        <span class="badge">Coming Soon</span>
+      </div>
+
+      <div class="portal-card">
+        <h3>🎯 Focus Recommendations</h3>
+        <p>
+          AI automatically suggests weak areas and topics that need revision.
+        </p>
+        <span class="badge">Coming Soon</span>
+      </div>
+
+      <div class="portal-card">
+        <h3>👨‍👩‍👧 Class / Parent Reports</h3>
+        <p>
+          Download monthly progress reports to share with parents and school administrators.
+        </p>
+        <span class="badge">Future Roadmap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download
