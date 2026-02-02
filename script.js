@@ -140,3 +140,21 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+// ---- AR OPEN FUNCTION ----
+function openAR(modelPath) {
+  const viewer = document.getElementById("arViewer");
+  if (!viewer) {
+    alert("AR Viewer not found. Please check model-viewer setup.");
+    return;
+  }
+  viewer.src = modelPath;
+  viewer.activateAR();
+}
+
+function open3D(modelUrl) {
+  const viewer = document.getElementById("viewer3d");
+  viewer.src = modelUrl;
+  viewer.style.display = "block";
+  viewer.scrollIntoView({ behavior: "smooth" });
+}

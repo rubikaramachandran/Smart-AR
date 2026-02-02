@@ -60,20 +60,7 @@
       Scan textbook pages and see concepts pop out in 3D with explanations.
     </p>
 
-    <div class="modules-grid">
-      <!-- Module Card 1 -->
-      <div class="module-card">
-        <h3>🌌 Solar System</h3>
-        <p>Explore planets in 3D, understand orbits and distances visually.</p>
-        <div class="module-actions">
-          <button class="outline-btn scan-btn">📷 Scan Image</button>
-          <button class="text-btn">View in AR →</button>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 60%"></div>
-        </div>
-        <p class="progress-text">Progress: 60% completed</p>
-      </div>
+    
 
       <!-- Module Card 2 -->
       <div class="module-card">
@@ -81,7 +68,11 @@
         <p>View the heart in AR, watch blood flow and understand each chamber.</p>
         <div class="module-actions">
           <button class="outline-btn scan-btn">📷 Scan Image</button>
-          <button class="text-btn">View in AR →</button>
+<button class="text-btn"
+  onclick="open3D('models/humanheart.glb')">
+  View in AR →
+</button>
+
         </div>
         <div class="progress-bar">
           <div class="progress-fill" style="width: 35%"></div>
@@ -89,25 +80,25 @@
         <p class="progress-text">Progress: 35% completed</p>
       </div>
 
-      <!-- Module Card 3 -->
-      <div class="module-card">
-        <h3>💧 Water Cycle</h3>
-        <p>Watch evaporation, condensation, and rainfall as animated AR scenes.</p>
-        <div class="module-actions">
-          <button class="outline-btn scan-btn">📷 Scan Image</button>
-          <button class="text-btn">View in AR →</button>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 80%"></div>
-        </div>
-        <p class="progress-text">Progress: 80% completed</p>
-      </div>
-    </div>
+ 
 
     <p class="note-text">
       *Progress and completion data can be synced with a backend or local storage in a future version.
     </p>
   </section>
+
+  <!-- 3D Model Viewer -->
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<model-viewer
+  id="viewer3d"
+  camera-controls
+  auto-rotate
+  style="width:100%; height:400px; margin-top:2rem; display:none;">
+</model-viewer>
+
 
   <!-- AI Study Assistant Page -->
   <section id="assistant" class="section assistant-section">
@@ -240,4 +231,19 @@
     </div>
   </section>
 
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<model-viewer
+  id="arViewer"
+  ar
+  ar-modes="scene-viewer webxr quick-look"
+  camera-controls
+  style="width:0;height:0;">
+</model-viewer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
   <!-- Download
